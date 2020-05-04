@@ -7,12 +7,12 @@ on:
       - master
 
 jobs:
-  ec2:
+  dokken:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         os: ['amazon', 'amazon2', 'ubuntu-1604', 'ubuntu-1804', 'centos-7', 'rhel-77']
-        suite: ['default', 'no-expire']
+        suite: ['default']
       fail-fast: false
     steps:
     - name: Check out code
@@ -26,4 +26,4 @@ jobs:
         SUITE: ${{matrix.suite}}
         OS: ${{matrix.os}}
         CHEF_LICENSE: accept-no-persist
-        KITCHEN_LOCAL_YAML: kitchen.ec2.yml
+        KITCHEN_LOCAL_YAML: kitchen.dokken.yml
