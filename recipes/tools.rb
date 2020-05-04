@@ -4,7 +4,7 @@
 #
 # Copyright:: 2020, tecRacer Opensource, Apache-2.0.
 
-if node.virtualization.system == 'vmware'
+if node['virtualization']['system'] == 'vmware'
 
   execute 'add_vmware_repo_key' do
     command 'wget http://packages.vmware.com/tools/VMWARE-PACKAGING-GPG-KEY.pub -q -O- | apt-key add -'
@@ -12,7 +12,7 @@ if node.virtualization.system == 'vmware'
   end
 
   apt_repository 'vmware-tools' do
-    uri "http://packages.vmware.com/tools/esx/#{node.vmware.esx.tools.version}/ubuntu"
+    uri "http://packages.vmware.com/tools/esx/#{node['vmware']['esx']['tools']['version']}/ubuntu"
     components %w(main restricted)
     action :add
     notifies :run, 'resource[add_vmware_repo_key]', :immediately
