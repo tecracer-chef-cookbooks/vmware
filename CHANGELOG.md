@@ -2,7 +2,8 @@
 
 ## 0.0.3
 
-- ignore_failure on kmod package installation (Vmware have a delay for building new package)
+- ignore_failure on kmod package installation (Vmware have a delay for building
+  new package)
 
 ## 0.0.2
 

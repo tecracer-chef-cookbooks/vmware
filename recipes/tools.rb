@@ -1,29 +1,24 @@
 #
-# Cookbook Name:: vmware
+# Cookbook:: vmware
 # Recipe:: tools
 #
-# Copyright 2012, Efactures
-#
-# Apache 2.0
-#
-
+# Copyright:: 2020, tecRacer Opensource, Apache-2.0.
 
 if node.virtualization.system == 'vmware'
 
-  execute "add_vmware_repo_key" do
-    command "wget http://packages.vmware.com/tools/VMWARE-PACKAGING-GPG-KEY.pub -q -O- | apt-key add -"
+  execute 'add_vmware_repo_key' do
+    command 'wget http://packages.vmware.com/tools/VMWARE-PACKAGING-GPG-KEY.pub -q -O- | apt-key add -'
     action :nothing
   end
 
-  apt_repository "vmware-tools" do
+  apt_repository 'vmware-tools' do
     uri "http://packages.vmware.com/tools/esx/#{node.vmware.esx.tools.version}/ubuntu"
-    distribution node['lsb']['codename']
-    components ["main","restricted"]
+    components %w(main restricted)
     action :add
-    notifies :run, resources(:execute => "add_vmware_repo_key"), :immediately
+    notifies :run, 'resource[add_vmware_repo_key]', :immediately
   end
 
-  package "vmware-tools-esx-nox" do
+  package 'vmware-tools-esx-nox' do
     action :install
   end
 
