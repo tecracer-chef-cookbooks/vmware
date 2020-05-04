@@ -16,7 +16,7 @@ platforms:
   - name: amazon
     driver:
       image: dokken/amazonlinux
-      pid_one_command: /usr/lib/systemd/systemd
+      pid_one_command: /sbin/init
 
   - name: amazon2
     driver:
