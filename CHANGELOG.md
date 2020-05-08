@@ -5,7 +5,7 @@
 * update minimum required chef version to 15.0 (BREAKING CHANGE)
 * update metadata.rb with new contents
 * update attributes + recipe files with style fixes
-* update changelog, contributing, readme and testing
+* update changelog, contributing, readme
 * add dependency to `vmware-tools` cookbook
 * add GitHub templates for bugs and pull requests
 * add GitHub Actions for linting and kitchen test
