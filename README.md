@@ -1,30 +1,27 @@
 # vmware Cookbook
 
-TODO: Enter description here
-Installs vmware tools
+## Scope
 
-## Requirements
+Chef cookbook for installing [VMware Software](https://docs.vmware.com/allproducts.html).
+Currently only vmware-tools are possible.
 
-### Platforms
-
-* Ubuntu
-
-### Chef
-
-* Chef 12.0+
-
-### Cookbooks
-
-* none
+The cookbook is mainly a wrapper for all other cookbooks.
 
 ## Attributes
 
-* `node['vmware']['esx']['tools']['version']` - can be set for other vmware
-  guest tools version
+See the attributes in the specified cookbook
+
+* [vmware-tools cookbook](https://github.com/tecracer-chef-cookbooks/vmware-tools)
 
 ## Usage
 
-Simply include "recipe[vmware::tools]" on your run_list
+### vmware-tools::tools
+
+The tools recipe will include the default recipe of the `vmware-tools` cookbook.
+
+## Testing
+
+For more details look at the [TESTING.md](./TESTING.md).
 
 ## License & Authors
 
