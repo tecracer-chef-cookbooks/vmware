@@ -6,6 +6,7 @@
 * update metadata.rb with new contents
 * update attributes + recipe files with style fixes
 * update changelog, contributing, readme and testing
+* add dependency to `vmware-tools` cookbook
 * add GitHub templates for bugs and pull requests
 * add GitHub Actions for linting and kitchen test
 * add Codeowners
