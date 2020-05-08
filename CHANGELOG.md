@@ -12,20 +12,15 @@
 * add kitchen configs for ec2, dokken
 * rename .kitchen files to kitchen
 
-
 ## [0.0.3] - 2013-10-04
 
-- ignore_failure on kmod package installation (Vmware have a delay for building
+* ignore_failure on kmod package installation (Vmware have a delay for building
   new package)
 
 ## [0.0.2] - 2012-01-12
 
-- Metadata change
+* Metadata change
 
 ## [0.0.1] - 2012-01-12
 
-- Initial import
-
-
-
-## [3.0.0] - 2020-05-06
+* Initial import
